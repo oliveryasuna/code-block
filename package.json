@@ -4,7 +4,7 @@
   "author": "Oliver Yasuna",
   "description": "A LitElement wrapping Prism.",
   "license": "BSD-3-Clause",
-  "homepage": "https://oliveryasuna.github.io/",
+  "homepage": "https://github.com/oliveryasuna/code-block",
   "keywords": [
     "web-components",
     "lit-element",
