@@ -1,6 +1,6 @@
 {
   "name": "@oliveryasuna/code-block",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Oliver Yasuna",
   "description": "A LitElement wrapping Prism.",
   "license": "BSD-3-Clause",

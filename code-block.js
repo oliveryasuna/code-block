@@ -41,7 +41,7 @@ class CodeBlockElement extends LitElement {
         type: String
       },
 
-      fancy: {
+      plain: {
         attribute: true,
         reflect: true,
         type: Boolean
@@ -58,7 +58,7 @@ class CodeBlockElement extends LitElement {
 
     this.language = 'clike';
     this.theme = 'prism';
-    this.fancy = true;
+    this.plain = false;
 
     this._importedLanguage = [];
   }
@@ -79,7 +79,7 @@ class CodeBlockElement extends LitElement {
     return html`
         <style></style>
 
-        <pre class="${ifDefined(this.fancy ? `language-${this.language}` : undefined)}"><code id="output"></code></pre>
+        <pre class="${ifDefined(this.plain ? undefined : `language-${this.language}`)}"><code id="output"></code></pre>
     `;
   }
 
