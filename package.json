@@ -1,5 +1,5 @@
 {
-  "name": "code-block",
+  "name": "@oliveryasuna/code-block",
   "version": "1.0.0",
   "author": "Oliver Yasuna",
   "description": "A LitElement wrapping Prism.",
