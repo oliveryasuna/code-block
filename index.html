@@ -30,14 +30,31 @@
 </head>
 <body>
 
-<code-block id="example" language="javascript"></code-block>
+<code-block id="default" language="javascript"></code-block>
+<code-block id="java" language="java"></code-block>
+<code-block id="themed" language="javascript" theme="prism-tomorrow"></code-block>
 
 <script>
-  const exampleElem = document.querySelector('#example');
+  const JS_CODE = `function print(msg) {
+  console.log(msg);
+}
 
-  exampleElem.code = `
-function print(msg) {}
-    `;
+print('Hello, World!');`;
+
+  const JAVA_CODE = `public void print(String msg) {
+  System.out.println(msg);
+}
+
+print("Hello, World!");`;
+
+  const defaultElem = document.querySelector('#default');
+  defaultElem.code = JS_CODE;
+
+  const javaElem = document.querySelector('#java');
+  javaElem.code = JAVA_CODE;
+
+  const themedElem = document.querySelector('#themed');
+  themedElem.code = JS_CODE;
 </script>
 
 </body>

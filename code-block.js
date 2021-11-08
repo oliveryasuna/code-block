@@ -45,6 +45,10 @@ class CodeBlockElement extends LitElement {
         attribute: true,
         reflect: true,
         type: Boolean
+      },
+
+      _importedLanguages: {
+        attribute: false
       }
     }
   }
@@ -55,6 +59,8 @@ class CodeBlockElement extends LitElement {
     this.language = 'clike';
     this.theme = 'prism';
     this.fancy = true;
+
+    this._importedLanguage = [];
   }
 
   static get styles() {
@@ -82,7 +88,14 @@ class CodeBlockElement extends LitElement {
       this.shadowRoot.querySelectorAll('style')[0].textContent = (await import(`./themes/${this.theme}.js`)).css;
     }
 
-    if(this.code !== properties.get('code') || this.language !== properties.get('language')) {
+    const languageChanged = this.language !== properties.get('language');
+    if(this.code !== properties.get('code') || languageChanged) {
+      if(languageChanged) {
+        if(!this._importedLanguage.includes(this.language)) {
+          await import(`prismjs/components/prism-${this.language}.js`);
+        }
+      }
+
       this.shadowRoot.querySelector('#output').innerHTML = Prism.highlight(this.code, Prism.languages[this.language], this.language);
     }
   }
