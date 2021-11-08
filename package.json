@@ -20,7 +20,7 @@
   "module": "code-block.js",
   "type": "module",
   "scripts": {
-    "demo": "wds"
+    "demo": "wds --node-resolve --watch"
   },
   "dependencies": {
     "lit-element": "^2.5.1",
