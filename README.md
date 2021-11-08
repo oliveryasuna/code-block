@@ -1,4 +1,4 @@
-# code-block
+# <code-block>
 
 A web component using [Prism](https://github.com/PrismJS/prism/).
 
