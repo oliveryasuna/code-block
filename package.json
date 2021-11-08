@@ -1,10 +1,13 @@
 {
   "name": "@oliveryasuna/code-block",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Oliver Yasuna",
   "description": "A LitElement wrapping Prism.",
   "license": "BSD-3-Clause",
-  "homepage": "https://github.com/oliveryasuna/code-block",
+  "homepage": "https://oliveryasuna.github.io/",
+  "repository": {
+    "url": "https://github.com/oliveryasuna/code-block"
+  },
   "keywords": [
     "web-components",
     "lit-element",
